@@ -49,7 +49,7 @@ export default function Navbar(props) {
   );
 }
 
-Navbar.prototype = {
+Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutText: PropTypes.string.isRequired,
 };
