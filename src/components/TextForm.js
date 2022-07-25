@@ -13,12 +13,17 @@ export default function TextForm(props) {
     setText(newText);
   };
 
+  const handleClearClick = () => {
+    let newText = "";
+    setText(newText);
+  };
+
   const handleOnChange = (event) => {
     // console.log("On change");
     setText(event.target.value);
   };
 
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState("");
 
   // text = "new text"; // Wrong way to change the state
   // setText("new text"); // Correct way to change the state
@@ -41,6 +46,9 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-primary mx-1" onClick={handleLoClick}>
           Convert to Lowercase
+        </button>
+        <button className="btn btn-primary mx-1" onClick={handleClearClick}>
+          Clear Text
         </button>
       </div>
       <div className="container my-3">
